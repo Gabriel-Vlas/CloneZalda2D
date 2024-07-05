@@ -17,13 +17,23 @@ public class Game extends Canvas implements Runnable {
         Game game = new Game();
         JFrame frame = new JFrame();
         frame.add(game);
-        frame.setTitle("2D GAME");
+        frame.setTitle("Zelda Clone");
         frame.pack();
+
         frame.setLocationRelativeTo((Component)null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         frame.setVisible(true);
+
+        new Thread(game).start();
     }
 
+    @Override
     public void run() {
+
+        while(true) {
+            System.out.println("Chamando game looping");
+        }
+
     }
 }
